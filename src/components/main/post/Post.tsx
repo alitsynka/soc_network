@@ -1,24 +1,31 @@
 import React, {ChangeEvent, useState} from "react";
 import s from './Post.module.css';
+import {useDispatch} from "react-redux";
+import {addTaskAC, changeTaskTitleAC, removeTaskAC} from "../../../state/PostsReducer";
 
 type EditableSpanPropsType = {
+    id: string
     title: string
-    onChange: (value: string) => void
-    onRemoveHandler: () => void
 }
 
 export const Post = (props: EditableSpanPropsType) => {
     let [editMode, setEditMode] = useState<boolean>(false)
     let [title, setTitle] = useState(props.title)
+    const dispatch = useDispatch()
+
+    const removePost = () => {
+        const action = removeTaskAC(props.id)
+        dispatch(action)
+    }
 
     const activateEditMode = () => {
         setEditMode(true)
         setTitle(props.title)
     }
     const activateViewMode = () => {
-        // debugger
         setEditMode(false)
-        props.onChange(title)
+        const action = changeTaskTitleAC(props.id, title)
+        dispatch(action)
         console.log(title)
     }
     const onChangeTitleHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -30,7 +37,7 @@ export const Post = (props: EditableSpanPropsType) => {
                 <textarea value={title}
                           className={s.Input}
                           onChange={onChangeTitleHandler}
-                    // onBlur={activateViewMode}
+
                           rows={8}
                           autoFocus={true}/>
                 <button onClick={activateViewMode}>save</button>
@@ -43,7 +50,7 @@ export const Post = (props: EditableSpanPropsType) => {
                     <button onClick={activateEditMode}
                             className={s.EditBtn}
                     >edit</button>
-                    <button onClick={props.onRemoveHandler}
+                    <button onClick={removePost}
                             className={s.RemoveBtn}>delete post</button>
                 </div>
             </>

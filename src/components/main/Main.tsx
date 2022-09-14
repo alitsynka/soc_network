@@ -10,20 +10,25 @@ import {AppRootStateType} from "../../state/store";
 import {addTaskAC, changeTaskTitleAC, removeTaskAC} from "../../state/PostsReducer";
 
 type MainTaskType = {
-    posts: PostType[]
-    removePost: (taskId: string) => void
-    addPost: (title: string) => void
-    changePostTitle: (taskId: string, newTitle: string) => void
 }
 
 export const Main = (props: MainTaskType) => {
+    const posts = useSelector<AppRootStateType, PostType[]>(state => state.posts)
 
     const [title, setTitle] = useState('')
     const [error, setError] = useState<string | null>(null)
+    const dispatch = useDispatch()
 
-    const addTask = () => {
+    // const addPost = (title:string) => {
+    //     const action = addTaskAC(title)
+    //     dispatch(action)
+    // }
+
+    const addPost = () => {
         if (title.trim() !== '') {
-            props.addPost(title.trim())
+            // props.addPost(title.trim())
+            const action = addTaskAC(title.trim())
+            dispatch(action)
             setTitle('')
         } else {
             setError('title is required')
@@ -35,7 +40,7 @@ export const Main = (props: MainTaskType) => {
     const onKeyPressHandler = (e: KeyboardEvent<HTMLTextAreaElement>) => {
         setError(null)
         if (e.key === "Enter") {
-            addTask()
+            addPost()
         }
     }
 
@@ -53,7 +58,7 @@ export const Main = (props: MainTaskType) => {
                               rows={5}
                     />
 
-                        <IconButton color="primary" onClick={addTask}>
+                        <IconButton color="primary" onClick={addPost}>
                             <AddBox/>
                         </IconButton>
                     </div>
@@ -62,15 +67,9 @@ export const Main = (props: MainTaskType) => {
 
                 <div>
                     {
-                        props.posts.map(t => {
-                            const onRemoveHandler = () => props.removePost(t.id)
-                            const onChangeTitleHandler = (newValue: string) => {
-                                return props.changePostTitle(t.id, newValue)
-                            }
-                            return <div key={t.id} className={s.PostWrapper}>
-                                <Post title={t.title} onChange={onChangeTitleHandler}
-                                              onRemoveHandler={onRemoveHandler}/>
-
+                        posts.map(p => {
+                            return <div key={p.id} className={s.PostWrapper}>
+                                <Post title={p.title} id={p.id} />
                             </div>
                         })
                     }

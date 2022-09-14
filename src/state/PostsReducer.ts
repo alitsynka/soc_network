@@ -34,8 +34,8 @@ type ActionsType =  RemovePostActionType | AddPostActionType | ChangePostTitleAc
 export const postsReducer = (state:PostType[] = initialState, action:ActionsType) => {
     switch (action.type){
         case "ADD-POST":{
-            const newTask = {id:v1(), title:action.title}
-            return [newTask, ...state]
+            const newPost = {id:v1(), title:action.title}
+            return [newPost, ...state]
         }
         case "REMOVE-POST":{
             const stateCopy = [...state]

@@ -3,15 +3,16 @@ import React from "react";
 import {CategoryType} from "./News";
 
 type BtnsPropsType = {
-    changeFilter: (category: CategoryType) => any
+    onClick: (category: CategoryType) => any
     chosenCategory: null | CategoryType
+    category: CategoryType
 }
 export const Btn = (props: BtnsPropsType) => {
     return (
         <Button
             variant={'contained'}
-            onClick={props.changeFilter('Memes')}
-            color={props.chosenCategory === 'Memes' ? 'primary' : 'inherit'}
-        >Memes</Button>
+            onClick={props.onClick(props.category)}
+            color={props.chosenCategory === props.category ? 'primary' : 'inherit'}
+        >{props.category}</Button>
     )
 }

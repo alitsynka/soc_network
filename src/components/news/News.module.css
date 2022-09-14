@@ -30,19 +30,15 @@
 .New{
 	width: 380px;
 	letter-spacing: .03em;
-	
-	/*margin-top: 20px;*/
 }
 .Buttons{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*border: 3px solid yellow;*/
 	margin-top: 20px;
 }
 .Btns{
 	width: 80%;
-	/*border: 2px solid mediumpurple;*/
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

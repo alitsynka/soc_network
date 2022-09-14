@@ -1,8 +1,9 @@
 import React, {useMemo, useState} from "react";
 import s from "./News.module.css"
-import {Button} from "@mui/material";
+import {Btn} from "./Btn";
 
-export type CategoryType = 'Politics' | 'Technology' | 'Memes';
+const categories = ['Politics', 'Technology', 'Memes'] as const;
+export type CategoryType = (typeof categories)[number]
 
 export type NewsType = {
     id: string
@@ -58,22 +59,9 @@ export const News = () => {
     return (
         <div className={s.Buttons}>
             <div className={s.Btns}>
-                <Button
-                    variant={'contained'}
-                    onClick={changeFilter('Politics')}
-                    color={chosenCategory === 'Politics' ? 'primary' : 'inherit'}
-                    className={s.Btn}
-                >Politics</Button>
-                <Button
-                    variant={'contained'}
-                    onClick={changeFilter('Technology')}
-                    color={chosenCategory === 'Technology' ? 'primary' : 'inherit'}
-                >Technology</Button>
-                <Button
-                    variant={'contained'}
-                    onClick={changeFilter('Memes')}
-                    color={chosenCategory === 'Memes' ? 'primary' : 'inherit'}
-                >Memes</Button>
+                {categories.map(category => (
+                    <Btn onClick={changeFilter} chosenCategory={chosenCategory} category={category}/>
+                    ))}
             </div>
             {filteredNews.map(article => (
                 <div className={s.Wrapper}>
