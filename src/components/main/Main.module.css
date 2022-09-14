@@ -1,0 +1,87 @@
+.image{
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	margin: 30px 0px  30px 80px;
+}
+.Wrapper{
+	border: 1px solid #777676;
+	/*border: 1px solid #1976d2;*/
+	/*box-sizing: border-box;*/
+	margin: 15px auto;
+	width: 80%;
+	/*min-height: 100%;*/
+	min-height: 85vh;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	/*box-shadow: 0px 6px 10px 1px rgba(34, 60, 80, 0.2);*/
+	border-radius: 15px;
+	padding-bottom: 20px;
+}
+.User{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/*align-items: center;*/
+	/*border: 2px solid pink;*/
+}
+.Naming{
+	margin-top: 30px;
+	/*border: 2px solid goldenrod;*/
+	margin-right: 320px;
+}
+.Naming h3{
+	font-weight: normal;
+	font-family: sans-serif;
+	/*font-size: 20px;*/
+}
+.Posts{
+	margin: 0px 65px;
+	/*border: 2px solid purple;*/
+}
+.PostWrapper{
+	/*border: 2px solid mediumpurple;*/
+	display: flex;
+	flex-direction: column;
+	/*justify-content: center;*/
+	align-items:flex-end;
+	margin: 20px 0px;
+}
+.RemoveBtn{
+	display: block;
+	width: 13%;
+	/*height: 20%;*/
+	border-radius: 4px;
+	/*border: none;*/
+	border: 1px solid #777676;
+	/*position: relative;*/
+	/*background-color: deeppink;*/
+	/*float: right;*/
+	margin-right: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+}
+.TextAreaS{
+	width: calc(100% - 46px);
+	height: 100%;
+	border-radius: 7px;
+	font-family: Arial;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height:1.5em;
+	padding: 10px 10px;
+}
+.WrapperInput{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.Error {
+	width: calc(100% - 46px);
+	height: 100%;
+	border-radius: 7px;
+	border: red 1px solid;
+}
+
+.ErrorMessage {
+	color: red;
+	/*margin-left: 100px;*/
+}
