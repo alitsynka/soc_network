@@ -35,6 +35,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	margin-top: 20px;
 }
 .Btns{
@@ -42,4 +43,40 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+}
+@media (min-width: 355px) and (max-width:769px) {
+	.Wrapper{
+		margin: 20px auto;
+		border: 1px solid purple;
+		max-width: 90%;
+		/*margin: 20px 10px;*/
+	}
+	.Buttons{
+		width: 100%;
+		margin-top: 20px;
+	}
+	.Btns{
+		width: 90%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+@media (min-width: 279px) and (max-width:354px) {
+	.Wrapper{
+		margin: 20px auto;
+		border: 1px solid purple;
+		max-width: 90%;
+		/*margin: 20px 10px;*/
+	}
+	.Buttons{
+		width: 100%;
+		margin-top: 20px;
+	}
+	.Btns{
+		width: 90%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
 }

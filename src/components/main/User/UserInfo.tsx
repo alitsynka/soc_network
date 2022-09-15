@@ -4,7 +4,9 @@ import React from "react";
 
 export function UserInfo() {
     return <div className={s.User}>
-        <img src={image} className={s.image}/>
+        <div>
+            <img src={image} className={s.image}/>
+        </div>
         <div className={s.Naming}>
             <h1>John</h1>
             <h2>Doe</h2>

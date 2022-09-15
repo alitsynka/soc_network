@@ -2,7 +2,7 @@
 	height: 200px;
 	width: 200px;
 	border-radius: 100%;
-	margin: 30px 0px  30px 80px;
+	margin: 30px 0px  30px 0px;
 }
 .Wrapper{
 	border: 1px solid #777676;
@@ -14,13 +14,18 @@
 	padding-bottom: 20px;
 }
 .User{
+	width: 70%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
+	/*align-items: center;*/
+	/*border: 3px solid teal;*/
+	margin: 0 auto;
 }
 .Naming{
+	display: block;
 	margin-top: 30px;
-	margin-right: 320px;
+	/*margin-right: 320px;*/
 }
 .Naming h3{
 	font-weight: normal;
@@ -30,10 +35,12 @@
 	margin: 0px 65px;
 }
 .PostWrapper{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items:flex-end;
 	margin: 20px 0px;
+	/*border: 3px solid darkgreen;*/
 }
 .RemoveBtn{
 	display: block;
@@ -67,4 +74,144 @@
 
 .ErrorMessage {
 	color: red;
+}
+@media (min-width: 390px) and (max-width:541px){
+	.Wrapper{
+		/*border: 1px solid red;*/
+		margin: 15px auto;
+		width: 95%;
+		/*min-height: 85vh;*/
+		/*box-shadow: 0 2px 4px rgba(0, 0, 0, .2);*/
+		/*border-radius: 15px;*/
+		/*padding-bottom: 20px;*/
+	}
+	.User{
+		/*width: 0%;*/
+		display: flex;
+		flex-direction: column;
+		/*justify-content: space-around;*/
+		align-items: center;
+		/*border: 3px solid teal;*/
+		margin: 0 auto;
+		height: 100%;
+	}
+	.Naming{
+		display: block;
+		margin-top: 0px;
+		/*margin-right: 320px;*/
+	}
+	.image{
+		 height: 200px;
+		 width: 200px;
+		 border-radius: 100%;
+		 margin-bottom: 0px;
+	 }
+	.Naming h3{
+		font-weight: bolder;
+		font-family: sans-serif;
+	}
+	.Posts{
+		width: 90%;
+		margin: 0 auto;
+		/*border: 2px solid crimson;*/
+		padding: 0px 5px;
+	}
+	.PostWrapper{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items:flex-end;
+		margin-bottom: 20px;
+		/*border: 3px solid darkgreen;*/
+	}
+}
+@media (min-width: 355px) and (max-width:541px) {
+	.Wrapper{
+		/*border: 1px solid red;*/
+		margin: 15px auto;
+		width: 95%;
+		/*min-height: 85vh;*/
+	}
+	.User{
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/*border: 3px solid teal;*/
+		margin: 0 auto;
+		height: 100%;
+	}
+	.Naming{
+		display: block;
+		margin-top: 0px;
+	}
+	.image{
+		height: 200px;
+		width: 200px;
+		border-radius: 100%;
+		margin-bottom: 0px;
+	}
+	.Naming h3{
+		font-weight: bolder;
+		font-family: sans-serif;
+	}
+	.Posts{
+		width: 90%;
+		margin: 0 auto;
+		/*border: 2px solid crimson;*/
+		padding: 0px 5px;
+	}
+	.PostWrapper{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items:flex-end;
+		margin-bottom: 20px;
+		/*border: 3px solid darkgreen;*/
+	}
+}
+@media (min-width: 279px) and (max-width:354px) {
+	.Wrapper{
+		/*border: 1px solid red;*/
+		margin: 15px auto;
+		width: 95%;
+		/*min-height: 85vh;*/
+	}
+	.User{
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/*border: 3px solid teal;*/
+		margin: 0 auto;
+		height: 100%;
+	}
+	.Naming{
+		display: block;
+		margin-top: 0px;
+	}
+	.image{
+		height: 200px;
+		width: 200px;
+		border-radius: 100%;
+		margin-bottom: 0px;
+	}
+	.Naming h3{
+		font-weight: bolder;
+		font-family: sans-serif;
+	}
+	.Posts{
+		width: 90%;
+		margin: 0 auto;
+		/*border: 2px solid crimson;*/
+		padding: 0px 5px;
+	}
+	.PostWrapper{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items:flex-end;
+		margin-bottom: 20px;
+		/*border: 3px solid darkgreen;*/
+	}
 }

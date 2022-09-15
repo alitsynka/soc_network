@@ -17,8 +17,6 @@ export type PostType = {
 
 function App() {
 
-
-
     return (
         <BrowserRouter basename={'soc_network'}>
             <div className="App">

@@ -10,24 +10,28 @@ export const Header = () => {
     const openMenu = () => { !editMode ? setEditMode(true) : setEditMode(false)}
 
     return(
-<AppBar position="static" >
+<AppBar position="static" className={s.kgkf}>
     <Toolbar >
-      <div className={s.header1}>
-            <div className={s.Wrapper}>
-                <IconButton edge="start" color="inherit" aria-label="menu">
-                    <Menu onClick={openMenu} className={s.MenuBurger} />
-                </IconButton>
-            </div>
-            {
-                editMode && <Navbar/>
-            }
+        <div className={s.HeaderWrapper}>
+            <div className={s.header1}>
+                <div className={s.Wrapper}>
+                    <IconButton edge="start" color="inherit" aria-label="menu">
+                        <Menu onClick={openMenu} className={s.MenuBurger} />
+                    </IconButton>
+                </div>
+                {
+                    editMode && <Navbar/>
+                }
 
+            </div>
+            {/*<div className={s.SocNetwork}>*/}
+                <Typography variant="h6" color={"inherit"} component="div"
+                            className={s.SocNetwork}>
+                    Social network
+                </Typography>
+            {/*</div>*/}
         </div>
-        <div className={s.SocNetwork}>
-            <Typography variant="h6" color={"inherit"} component="div">
-                Social network
-            </Typography>
-        </div>
+
     </Toolbar>
 </AppBar>
     )

@@ -36,3 +36,63 @@
 	margin-right: 20px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
 }
+@media (min-width: 355px) and (max-width:769px){
+	.EditBtn{
+		border-radius: 4px;
+		border: 1px solid #777676;
+		margin-right: 15px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+		font-size: 18px;
+	}
+	.RemoveBtn{
+		/*width: 20px;*/
+		border-radius: 4px;
+		border: 1px solid #777676;
+		margin-right: 5px;
+		font-size: 18px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	}
+	.Description{
+		margin-bottom: 15px;
+	}
+}
+/*@media (min-width: 355px) and (max-width:541px){*/
+/*	.EditBtn{*/
+/*		border-radius: 4px;*/
+/*		border: 1px solid #777676;*/
+/*		margin-right: 15px;*/
+/*		box-shadow: 0 1px 3px rgba(0, 0, 0, .2);*/
+/*		font-size: 18px;*/
+/*	}*/
+/*	.RemoveBtn{*/
+/*		!*width: 20px;*!*/
+/*		border-radius: 4px;*/
+/*		border: 1px solid #777676;*/
+/*		margin-right: 5px;*/
+/*		font-size: 18px;*/
+/*		box-shadow: 0 1px 3px rgba(0, 0, 0, .2);*/
+/*	}*/
+/*	.Description{*/
+/*		margin-bottom: 15px;*/
+/*	}*/
+/*}*/
+@media (min-width: 279px) and (max-width:354px) {
+	.EditBtn{
+		border-radius: 4px;
+		border: 1px solid #777676;
+		margin-right: 15px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+		font-size: 18px;
+	}
+	.RemoveBtn{
+		/*width: 20px;*/
+		border-radius: 4px;
+		border: 1px solid #777676;
+		margin-right: 5px;
+		font-size: 18px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+	}
+	.Description{
+		margin-bottom: 15px;
+	}
+}

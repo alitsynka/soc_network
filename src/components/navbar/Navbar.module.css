@@ -21,3 +21,36 @@
 .Nav:hover{
 	text-decoration: underline;
 }
+@media (min-width: 388px) and (max-width:769px) {
+.Wrapper{
+	margin-left: 5px;
+}
+}
+@media (min-width: 355px) and (max-width:541px) {
+	.Wrapper{
+		margin-left: 5px;
+	}
+}
+@media (min-width: 279px) and (max-width:354px) {
+	.Wrapper{
+		margin-left: 5px;
+	}
+	.Nav{
+		text-decoration: none;
+		font-weight: 400;
+		margin-top: 20px;
+		font-size: 17px;
+		color:white;
+		letter-spacing: 1px;
+		font-family: 'Montserrat', sans-serif;
+		/*margin-right: 17px;*/
+	}
+	.Wrapper{
+		width: 70px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		/*margin-left: 25px;*/
+	}
+}
